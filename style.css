@@ -42,21 +42,28 @@ body {
     cursor: pointer;
     display: inline-block;
     width: 100%;
-    background-origin: aliceblue;
+    background: rgb(255, 255, 255);
     padding: 10px;
     font-family: inherit;
     font-size: 15px ;
     border: 0;
     border-radius: 5px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.767);
 }
 .btn:focus {
     outline: 0;
 }
 .btn:active {
     transform: scale(.87);
+    background: rgba(255, 255, 255, 0.582);
+    color: rgba(0, 0, 0, 0.568);
 }
 .text {
     margin-top: 30px;
+}
+.text a {
+    color: rgba(240, 248, 255, 0.678);
 }
 
 .form-control {
@@ -84,5 +91,18 @@ body {
     position: absolute;
     top: 10px;
     left: 0px;
-    
+
+}
+.form-control label span {
+    display: inline-block;
+    font-size: 20px;
+    min-width: 5px;
+    color: aliceblue;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.256, 1.55);
+}
+.form-control input:focus + label span,
+.form-control input:active + label span,
+.form-control input:invalid + label span {
+    color: rgba(240, 248, 255, 0.644);
+    transform: translateY(-30px);
 }
